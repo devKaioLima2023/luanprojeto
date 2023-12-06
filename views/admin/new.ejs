@@ -1,0 +1,44 @@
+<%- include("../partials/headerBack.ejs") %>
+<div id="container-formulario">
+<h1 style="text-align: center; color: #fff; margin-top: 20px;">Criando Game:</h1>
+<form id="form-cria-games" method="post" action="/salvagame">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" placeholder="Digite o nome do game" name="nome" required>
+    <label for="imagem">Imagem:</label>
+    <input type="text" id="imagem" placeholder="Digite o nome da imagem" name="imagem" required>
+    <label for="requisitos">Requisitos:</label>
+    <textarea type="text" class="Tinymce" placeholder="Digite os requisitos" name="requisito"></textarea>
+    <label for="descrição">Descrição:</label>
+    <textarea type="text" class="Tinymce" placeholder="Digite a descrição" name="descrição"></textarea>
+    <label for="">Link Download:</label>
+    <input type="text" placeholder="Digite o link para download" name="linkDownload" required>
+    <br>    
+    <button style="width: 100%;" type="submit">Cadastrar Game</button>
+    <button style="width: 100%;" type="submit"><a style="text-decoration: none; color: #000;" href="/admin/gamestorrent/gerenciadordegames">Volta para o Gerenciador de Games</a></button>
+
+</form>
+</div>
+<script src="/tinymce/js/tinymce/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+    language: "pt_BR",
+    selector: ".Tinymce",
+    plugins: [
+      "advlist",
+      "autolink",
+      "link",
+      "image",
+      "lists",
+      "preview",
+      "searchreplace",
+      "wordcount",
+      "fullscreen",
+      "insertdatetime",
+      "media",
+      "save",
+      "table",
+      "emoticons",
+    ],
+  });
+</script>
+<%- include("../partials/footer.ejs") %>

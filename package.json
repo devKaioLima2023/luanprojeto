@@ -1,0 +1,21 @@
+{
+  "name": "games-torrent",
+  "version": "1.0.0",
+  "description": "Site de games torrent",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "expess": "^0.0.1-security",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.1",
+    "sequelize": "^6.33.0",
+    "slugify": "^1.6.6"
+  }
+}

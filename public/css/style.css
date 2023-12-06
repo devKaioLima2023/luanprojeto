@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+::-webkit-scrollbar {
+
+  width: 12px;               /* largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #222;        /* cor da área de rastreamento da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;    /* cor do botão da barra de rolagem */
+  border-radius: 20px;       /* arredondamento do botão da barra de rolagem */
+  border: 3px solid white;  /* cria um espaçamento ao redor do botão da barra de rolagem */
+}
+
+#cabeçalho {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #222;
+}
+#cabeçalho > #nome-do-site {
+  color: #fff;
+  font-weight: 200;
+}
+
+#cabeçalho > #nome-do-site #link-1{
+  text-decoration: none;
+  color:#fff
+}
+
+#link-2{
+  text-decoration: none;
+  color: #0f0;
+}
+
+#cabeçalho > #nome-do-site > #complemento-do-nome-do-site {
+  color: #0f0;
+  font-weight: 200;
+  margin-right: 20px;
+}
+
+#cabeçalho > #barra-pesquisa {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+#cabeçalho > #menu-hambúrguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+#cabeçalho > #menu-hambúrguer > .piper-menu {
+  margin-bottom: 8px;
+  background-color: #fff;
+  width: 50px;
+  height: 5px;
+  border-radius: 20px;
+}
+
+#container-games {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+  padding: 10px;
+  background-color: #333;
+}
+
+#container-games > .card-game {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#container-games > .card-game > img {
+  border-top: 10px solid black;
+  border-radius: 10px 10px 0px 0px;
+  border-left: 10px solid black;
+  border-right: 10px solid black;
+}
+
+#container-games > .card-game > .titulo {
+  background-color: #000;
+  padding: 10px;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 0px 0px 0px 0px;
+}
+#container-formulario{
+    padding: 20px;
+    margin: 5vh auto;
+    width: 890px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    border-radius: 20px;
+}
+
+
+#form-cria-games > label{
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+}
+#form-cria-games > input{
+    padding: 10px;
+    width: 800px;
+}
+#form-cria-games > textarea{
+  width: 800px;
+}
+#form-cria-games > textarea::placeholder{
+  padding: 10px;
+}
+#form-cria-games > button{
+    margin-top: 20px;
+    padding: 10px;
+    width: 200px;
+}
+
+#rodapé {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+}
+
+
+#descrição{
+  color: red;
+}
+
+#container_login{
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.descrisão_label{
+  display: block;
+  color: #fff;
+}
+
+#nome, #sobrenome, #email, #senha{
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+#formulario_de_cadastro{
+  width: 100%;
+}
+
+#mensagem-de-erro{
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+#botão-volta{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#container-botão{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+#link-para-adm{
+  color: #fff;
+  text-decoration: none;
+}
+
+#link-home-page a{
+  margin-left: 10px;
+}
+
+.botão-login{
+  display: block;
+  width: 500px;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.botão-login:hover{
+  transition: 1s ease-in-out;
+  background-color: #222;
+  color: #fff;
+
+}
+
+label{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

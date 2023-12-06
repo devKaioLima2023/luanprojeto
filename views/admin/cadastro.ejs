@@ -1,0 +1,16 @@
+<%- include("../partials/header.ejs") %>
+<div id="container_login">
+<form id="formulario_de_cadastro" method="post" action="/usuariocadastrado">
+    <label class="descrisão_label" for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui!">
+    <label class="descrisão_label" for="sobrenome">Sobrenome:</label>
+    <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome aqui!">
+    <label class="descrisão_label" for="email">E-mail:</label>
+    <input type="text" name="email" id="email" placeholder="Digite seu e-mail aqui!">
+    <label class="descrisão_label" for="senha">Senha:</label>
+    <input type="password" name="senha" id="email" placeholder="Digite sua senha aqui!">
+   <button type="submit" class="botão-login">Cadastrar</button>
+</form>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<%- include("../partials/footer.ejs") %>

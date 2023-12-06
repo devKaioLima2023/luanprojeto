@@ -1,0 +1,47 @@
+<%- include("../partials/header.ejs") %>
+<section style="padding: 10px;">
+<h1 style="text-align: center; color: #fff; margin-bottom: 10px;">Gerenciador de Games</h1>
+<hr>
+<br>
+<div style="display: flex; width: 100%; justify-content: space-around;">
+<h2 style="color: #fff;">Criar game</h2>
+<button style="border: none; border-radius: 20px; width: 25%; background-color: green; color: #fff;"><a style="text-decoration: none; color: #fff;color: #000;font-size: 20px;font-weight: 700;" href="/admin/gamestorrent/new">Criar Game</a></button>
+</div>
+<br>
+<hr>
+<br>
+<table border="1" style="border-collapse: collapse; width: 100%; border: 1px solid #fff;">  <thead>
+    <tr>
+      <td style="color:#fff; text-align: center;">Id</td>
+      <td style="color:#fff; text-align: center;">Nome do Game:</td>
+      <td style="color:#fff; text-align: center;">Ação</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% games.forEach(game=>{%>
+        <tr>
+            <td style="color:#fff; text-align: center; font-size: 24px; overflow: hidden;"><%=game.id%></td>
+            <td style="color:#fff; text-align: center; font-size: 24px; overflow: hidden;"><%=game.nome%></td>
+            <td style="color:#fff; text-align: center; padding: 10px;">
+            <button style="display: inline; border: none; border-radius: 20px; width: 100%; background-color: yellow; font-size: 20px; margin:10px 0; font-weight: 700;"><a style="font-weight: 700; text-decoration: none; color:#000;" href="/admin/gamestorrent/edit/<%=game.id%>">Editar</a></button>
+            <form style="display: inline;" method="post" action="/deletagame" onsubmit="confirmacao(event, this)">
+                <button style="display: inline;  border: none; border-radius: 20px; width: 100%; background-color: #f00; color: #000;font-size: 20px;margin:10px 0; font-weight: 700;">Deletar</button>
+                <input type="hidden" name="id" value="<%=game.id%>">
+            </form>
+            </td>
+          </tr>
+    <%})%>
+
+  </tbody>
+</table>
+</section>
+<script>
+    function confirmacao(event, form){
+        event.preventDefault();
+        const cofirmação = confirm("Deseja deletar esse games do banco de dados?")
+        if(cofirmação){
+            form.submit()
+        }
+    }
+</script>
+<%- include("../partials/footer.ejs") %>

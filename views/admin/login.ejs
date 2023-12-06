@@ -1,0 +1,18 @@
+<%- include("../partials/header.ejs") %>
+<div id="container_login">
+<form id="formulario_de_cadastro" method="post" action="/logar">
+    <label class="descrisão_label" for="email">E-mail:</label>
+    <input type="text" name="email" id="email" placeholder="Digite seu e-mail aqui!">
+    <label class="descrisão_label" for="senha">Senha:</label>
+    <input type="password" name="senha" id="email" placeholder="Digite sua senha aqui!">
+    <br>
+<div id="container-alinhamento">
+    <button class="botão-login" type="submit">Logar</button>
+    <a href="/cadastro"><button type="button" class="botão-login">Cadastra</button></a>
+</div>
+</form>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<%- include("../partials/footer.ejs") %>
